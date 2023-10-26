@@ -1,0 +1,214 @@
+@import url("https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Black+Ops+One&family=Libre+Baskerville:ital@1&family=Lobster&family=Merriweather:wght@700&family=Montserrat:ital,wght@0,100;0,200;0,800;1,100&family=Rajdhani:wght@300;400&family=Roboto+Mono:ital,wght@0,100;1,100&family=Roboto:ital,wght@1,100&family=Rubik+Iso&family=Tilt+Prism&family=Tulpen+One&display=swap");
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #212026;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Libre Baskerville;
+  font-size: 12px;
+}
+
+.player-container {
+  height: 500px;
+  width: 400px;
+  background: #302a2a;
+  border-radius: 20px;
+  background: #212121;
+  box-shadow: 15px 15px 30px rgb(25, 25, 25), -15px -15px 30px rgb(47, 56, 98);
+}
+
+.img-container {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  top: -50px;
+  left: 50px;
+  background: linear-gradient(#212121, #201a1a) padding-box,
+    linear-gradient(
+        145deg,
+        transparent 35%,
+        #1c2fff,
+        #ff40c6,
+        #bfff40,
+        #ff4040,
+        #40ff93
+      )
+      border-box;
+  border: 2px solid transparent;
+  padding: 22px 14px;
+  font-family: inherit;
+  color: white;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-size: 200% 100%;
+  animation: gradient 2s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 0% 50%;
+  }
+  75% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.img-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.5);
+  transition: transform 0.5s linear;
+}
+
+.spin-animation {
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  margin: 5px 0 0;
+}
+
+/* Progress */
+.progress-container {
+  background: #ebebeb;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 40px 20px;
+  height: 4px;
+  width: 90%;
+}
+
+.progress {
+  background: #020215;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+
+.duration-wrapper {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Controls */
+.player-controls {
+  position: relative;
+  top: -15px;
+  left: 120px;
+  width: 200px;
+}
+
+.fas {
+  font-size: 30px;
+  color: rgb(129, 129, 129);
+  margin-right: 30px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.fas:hover {
+  filter: brightness(70%);
+}
+
+#Repeat,
+#Shuffle {
+  font-size: 30px;
+  color: rgb(129, 129, 129);
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+#Repeat.active,
+#Shuffle.active {
+  color: rgb(11, 2, 38);
+}
+
+#Repeat {
+  left: 320px;
+  bottom: 30%;
+}
+
+#Shuffle {
+  right: 10px;
+  bottom: 30%;
+}
+
+#Repeat:hover,
+#Shuffle:hover {
+  filter: brightness(70%);
+}
+.main-button {
+  font-size: 40px;
+  position: relative;
+  top: 3px;
+}
+
+/* Media Query: iPhone (Vertical) */
+@media screen and (max-width: 376px) {
+  .player-container {
+    width: 95vw;
+  }
+
+  .img-container {
+    left: 29px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 15px;
+  }
+
+  .player-controls {
+    top: -10px;
+    left: 100px;
+  }
+  #Repeat {
+    left: 280px;
+  }
+}

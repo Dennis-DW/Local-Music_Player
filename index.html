@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music_Player</title>
+    <link rel="icon" type="image/png" href="Music.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="player-container">
+        <!-- song -->
+        <div class="img-container">
+            <img src="img/Goodmorning Africa .jpg" alt="Album art">
+        </div>
+        <h2 id="Title">Goodmorning Africa</h2>
+        <h3 id="Artist">wakadinali</h3>
+        <audio src="Music/Goodmorning Africa .mp3"></audio>
+        <!--progress  -->
+        <div class="progress-container" id="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="duration-wrapper">
+                <span id="current-time">0.00</span>
+                <span id="duration">3.20</span>
+            </div>
+        </div>
+        <!-- controls -->
+        <div class="player-controls">
+            <!-- Play buttons -->
+            <i class="fas fa-solid fa-backward" id="Prev" title="Previous"></i>
+            <i class="fas fa-solid fa-play" id="Start" title="Play"></i>
+            <i class="fas fa-solid fa-forward" id="Next" title="Next"></i>
+            <!-- Volume control -->
+            <input type="range" id="Volume" min="0" max="1" step="0.1" value="1">     
+        </div>
+                   <!-- Repeat and Shuffle buttons -->
+                   <i class="fas fa-solid fa-redo" id="Repeat" title="Repeat"></i>
+                   <i class="fas fa-solid fa-random" id="Shuffle" title="Shuffle"></i>
+    <!--script  -->
+    <script src="Script.js"></script>
+</body>
+
+</html>
